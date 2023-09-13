@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0; /* Background color */
+        }
+
+        h1 {
+            color: #007BFF; /* Header text color */
+        }
+
+        form {
+            background-color: #ffffff; /* Form background color */
+            max-width: 400px;
+            margin: 0 auto; /* Center-align the form */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for form */
+        }
+
+        label {
+            display: block;
+            color: #333; /* Label text color */
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="file"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF; /* Submit button background color */
+            color: #fff; /* Submit button text color */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3; /* Hover color for submit button */
+        }
+    </style>
+</head>
+<body>
+    <h1>Job Application Form</h1>
+    
+    <form action="submit_application.php" method="post">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other" required>
+        <label for="other">Other</label><br><br>
+        
+        <label for="resume">Upload Resume:</label>
+        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx"><br><br>
+        
+        <label>Skills:</label><br>
+        <input type="checkbox" id="html" name="skills[]" value="HTML">
+        <label for="html">HTML</label><br>
+        <input type="checkbox" id="css" name="skills[]" value="CSS">
+        <label for="css">CSS</label><br>
+        <input type="checkbox" id="javascript" name="skills[]" value="JavaScript">
+        <label for="javascript">JavaScript</label><br><br>
+        
+        <label for="comments">Additional Comments:</label><br>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+        
+        <input type="submit" value="Submit Application">
+    </form>
+</body>
+</html>
